@@ -1,3 +1,5 @@
+import { GlobalStyle } from "GlobalStyle";
+
 export const App = () => {
   return (
     <div
@@ -11,6 +13,9 @@ export const App = () => {
       }}
     >
       React homework template
+
+      <GlobalStyle/>
     </div>
+    
   );
 };
