@@ -1,21 +1,36 @@
-import { GlobalStyle } from "GlobalStyle";
+import { GlobalStyle } from './GlobalStyle';
+import { Routes, Route } from "react-router-dom";
+import AppLayout from './AppLayout/AppLayout';
+import Home from './Pages/Home/Home';
+import Movies from './Pages/Movies/Movies';
+import MovieDetails from './Pages/MovieDetails/MovieDetails';
+// import NotFound from './Pages/NotFound/NotFound';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+
+      <Routes>
+        <Route path="/" element={<AppLayout/>}>
+          <Route index element={<Home/>}/>
+          <Route path="movies" element={<Movies/>}/>
+          <Route  path="movies/:movieId" element={<MovieDetails/>}>
+            <Route path="cast"/>
+            <Route path="reviews"/>
+          </Route>
+        </Route>
+        <Route path="*" element={<Home/>} />
+      </Routes>
 
       <GlobalStyle/>
     </div>
     
   );
 };
+
+
+// '/' - компонент Home, домашняя страница со списком популярных кинофильмов.
+// '/movies' - компонент Movies, страница поиска фильмов по ключевому слову.
+// '/movies/:movieId' - компонент MovieDetails, страница с детальной информацией о кинофильме.
+// /movies/:movieId/cast - компонент Cast, информация о актерском составе. Рендерится на странице MovieDetails.
+// /movies/:movieId/reviews - компонент Reviews, информация об обзорах. Рендерится на странице MovieDetails.
