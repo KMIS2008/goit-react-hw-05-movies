@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Loader from 'components/Loader';
-import {fetchTrendingFilms} from "../../api";
+import {fetchTrendingFilms} from "../../components/api";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {ListTrendingFilms} from "../../ListTrendingFilms/ListTrendingFilms";
+import {ListTrendingFilms} from "../../components/MoviesList/ListTrendingFilms/ListTrendingFilms";
 
 export default function Home (){
 

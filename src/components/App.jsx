@@ -1,9 +1,9 @@
 import { GlobalStyle } from './GlobalStyle';
 import { Routes, Route } from "react-router-dom";
 import AppLayout from './AppLayout/AppLayout';
-import Home from './Pages/Home/Home';
-import Movies from './Pages/Movies/Movies';
-import MovieDetails from './Pages/MovieDetails/MovieDetails';
+import Home from '../Pages/Home/Home';
+import Movies from '../Pages/Movies/Movies';
+import MovieDetails from '../Pages/MovieDetails/MovieDetails';
 // import NotFound from './Pages/NotFound/NotFound';
 
 export const App = () => {

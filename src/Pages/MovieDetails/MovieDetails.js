@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
-import {fetchDitailsFilms} from '../../api';
-import Loader from 'components/Loader';
-import { useParams } from "react-router-dom";
+import {fetchDitailsFilms} from '../../components/api';
+import Loader from "components/Loader";
+import { useLocation, useParams } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 
 export default function MovieDetails(){
     const params = useParams();
+    const location = useLocation();
+    const backLocation = location.state?.from ?? '/';
 
     const[loading, setIsLoading]=useState();
     const[ditail, setDitail]=useState();
@@ -34,6 +37,7 @@ export default function MovieDetails(){
     return(
         <main>
              {loading && (<Loader/>)}
+             <Link to={backLocation}>Go back</Link>
              <ToastContainer/>
         </main>
     )

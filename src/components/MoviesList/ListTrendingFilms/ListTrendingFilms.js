@@ -6,6 +6,7 @@ import {List,
 
 export const ListTrendingFilms=({films})=>{
     const location = useLocation();
+    
     return (
         <div>
            <List>
