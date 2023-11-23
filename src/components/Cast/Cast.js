@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {fetchActors} from "../api";
 import { useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import {ContainerCast} from "./Cast.styled";
 import Loader from "components/Loader";
 
 export default function Cast(){
@@ -33,7 +34,7 @@ export default function Cast(){
     // const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'
 
     return (
-        <div>
+        <ContainerCast>
            {loading && (<Loader/>)}
            <ul>
            {castInfo.map(({ id, profile_path, original_name, name, character }) => (
@@ -54,7 +55,7 @@ export default function Cast(){
            </ul>
            {castInfo.length === 0 && (<h3>We have not info about Cast </h3>)}
            <ToastContainer/>            
-        </div>
+        </ContainerCast>
     )
 
 }

@@ -3,6 +3,7 @@ import Loader from "components/Loader";
 import { ToastContainer, toast } from 'react-toastify';
 import { useParams } from "react-router-dom";
 import {fetchReviews} from "../api";
+import {ContainerReviews} from "./Reviews.styled";
 
 export default function Reviews(){
 
@@ -36,14 +37,14 @@ export default function Reviews(){
            {loading && (<Loader/>)}  
            <ul>
               {reviewsInfo.map(review => 
-                (<li key={review.id}>
+                (<ContainerReviews key={review.id}>
                       <h2>Author: {review.author}</h2>
                       <p>{review.content}</p>
-                </li>)
+                </ContainerReviews>)
               )}
            </ul>
 
-           {reviewsInfo.length === 0 && (<h3>We have not info about Cast </h3>)}
+           {reviewsInfo.length === 0 && (<h3>We have not info about Rewiews </h3>)}
            <ToastContainer/>
 
         </div>

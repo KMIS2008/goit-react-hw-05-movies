@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import {fetchDitailsFilms} from '../../components/api';
 import Loader from "components/Loader";
 import { useLocation, useParams } from "react-router-dom";
-import { Link} from "react-router-dom";
+
 import AboutFilm from "components/AboutFilm/AboutFilm";
 import{LinkButton} from "./MovieDetails.styled";
 

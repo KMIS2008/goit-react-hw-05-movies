@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 margin: 0%, auto;
 padding: ${p=>p.theme.spacing(4)};
+background-color: #efef1d;
 `
 export const Header = styled.header`
 margin: 0%, auto;
