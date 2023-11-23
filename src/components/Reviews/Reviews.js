@@ -30,6 +30,9 @@ export default function Reviews(){
         }
 
         addreviewsInfo()
+
+        if (!params.movieId) return;
+        
     },[params.movieId, setReviewsInfo, setIsLoading])
 
     return (

@@ -3,7 +3,7 @@ import Loader from 'components/Loader';
 import {fetchTrendingFilms} from "../../components/api";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {ListTrendingFilms} from "../../components/MoviesList/ListTrendingFilms/ListTrendingFilms";
+import {MoviesList} from "../../components/MoviesList/MoviesList";
 
 export default function Home (){
 
@@ -35,7 +35,7 @@ useEffect(()=>{
     <main>
         <h1> Trending today </h1>
         {loading && (<Loader/>)}
-        <ListTrendingFilms films={films}/>
+        <MoviesList films={films}/>
         <ToastContainer />
     </main>
     )

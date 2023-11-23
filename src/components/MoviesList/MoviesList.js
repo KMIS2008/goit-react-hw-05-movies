@@ -4,7 +4,7 @@ import { Link} from "react-router-dom";
 import {List,
         Item} from "./ListTrendingFilms.styled";
 
-export const ListTrendingFilms=({films})=>{
+export const MoviesList=({films})=>{
     const location = useLocation();
 
     return (
