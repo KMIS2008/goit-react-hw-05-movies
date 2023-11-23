@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 
 export default function AboutFilm({ditails}){
@@ -52,6 +52,7 @@ export default function AboutFilm({ditails}){
                         <Link to="reviews">Reviews</Link>
                     </li>
                 </ul>
+                <Outlet/>
             </div>
 
         </div>

@@ -31,7 +31,7 @@ export async function fetchActors(movieId){
     const apiKey = '18a0b0a62e05a91cf2323f4a4ccd641e';
     const url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}&language=en-US`;
     const response = await axios.get(url);
-    return response.data.results;
+    return response.data.cast;
 }
 
 export async function fetchReviews(movieId){

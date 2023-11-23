@@ -33,7 +33,13 @@ export default function MovieDetails(){
         }
 
         addDitailsFilm();
+
     },[params.movieId, setIsLoading, setDitail])
+
+    if (!ditail) {
+    return;
+  }
+
 
     return(
         <main>
