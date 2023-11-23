@@ -6,7 +6,7 @@ import {List,
 
 export const ListTrendingFilms=({films})=>{
     const location = useLocation();
-    
+
     return (
         <div>
            <List>
@@ -18,8 +18,6 @@ export const ListTrendingFilms=({films})=>{
                         </Link>
 
                     </Item>
-               
-                // <TrendFilm film={film} key={film.id} state={{from: location}}/>
             )
            })} 
            </List>

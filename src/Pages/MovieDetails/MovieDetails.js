@@ -4,6 +4,7 @@ import {fetchDitailsFilms} from '../../components/api';
 import Loader from "components/Loader";
 import { useLocation, useParams } from "react-router-dom";
 import { Link} from "react-router-dom";
+import AboutFilm from "components/AboutFilm/AboutFilm";
 
 
 export default function MovieDetails(){
@@ -38,7 +39,8 @@ export default function MovieDetails(){
         <main>
              {loading && (<Loader/>)}
              <Link to={backLocation}>Go back</Link>
-             <ToastContainer/>
+             <AboutFilm ditails={ditail}/>
+             <ToastContainer />
         </main>
     )
 }
