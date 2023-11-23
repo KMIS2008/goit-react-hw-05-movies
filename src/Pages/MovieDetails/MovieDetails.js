@@ -5,6 +5,7 @@ import Loader from "components/Loader";
 import { useLocation, useParams } from "react-router-dom";
 import { Link} from "react-router-dom";
 import AboutFilm from "components/AboutFilm/AboutFilm";
+import{LinkButton} from "./MovieDetails.styled";
 
 
 export default function MovieDetails(){
@@ -44,7 +45,7 @@ export default function MovieDetails(){
     return(
         <main>
              {loading && (<Loader/>)}
-             <Link to={backLocation}>Go back</Link>
+             <LinkButton to={backLocation}>Go back</LinkButton>
              <AboutFilm ditails={ditail}/>
              <ToastContainer />
         </main>

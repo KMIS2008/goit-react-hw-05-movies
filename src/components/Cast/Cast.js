@@ -52,6 +52,7 @@ export default function Cast(){
           </li>
         ))}
            </ul>
+           {castInfo.length === 0 && (<h3>We have not info about Cast </h3>)}
            <ToastContainer/>            
         </div>
     )

@@ -1,4 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
+import {Container} from "./AboutFilms.styled";
+import {InfoFilm, GenreInfo, Information} from "./AboutFilms.styled";
 
 
 export default function AboutFilm({ditails}){
@@ -14,7 +16,8 @@ export default function AboutFilm({ditails}){
     
     return (
         <div>
-             <img
+            <Container>
+                             <img
             width="250px"
             src={
               poster_path
@@ -24,14 +27,14 @@ export default function AboutFilm({ditails}){
             alt="poster"
             />
 
-            <div>
+            <InfoFilm>
 
-               <h2>{title}</h2>
+               <h3>{title}</h3>
                <p>User score: {popularity}</p>
-               <h2>Overview</h2>
+               <h3>Overview</h3>
                <p>{overview}</p>
-               <h2>Genres</h2>
-               <ul>
+               <h3>Genres</h3>
+               <GenreInfo>
                   {genres.map(genre=>{
                     return (
                         <li key={genre.id}>
@@ -39,10 +42,12 @@ export default function AboutFilm({ditails}){
                         </li>
                     )
                   })}
-               </ul>
+               </GenreInfo>
 
-            </div>
-            <div>
+            </InfoFilm>
+            </Container>
+
+            <Information>
                 <h3>Additional information</h3>
                 <ul>
                     <li>
@@ -53,7 +58,7 @@ export default function AboutFilm({ditails}){
                     </li>
                 </ul>
                 <Outlet/>
-            </div>
+            </Information>
 
         </div>
 
