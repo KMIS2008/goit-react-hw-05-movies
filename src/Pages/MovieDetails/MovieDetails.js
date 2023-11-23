@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
 import {fetchDitailsFilms} from '../../components/api';
 import Loader from "components/Loader";
@@ -11,7 +11,8 @@ import{LinkButton} from "./MovieDetails.styled";
 export default function MovieDetails(){
     const params = useParams();
     const location = useLocation();
-    const backLocation = location.state?.from ?? '/';
+    const backLocationRef = useRef(location);
+    const backLocation = backLocationRef.current.state?.from ?? '/';
 
     const[loading, setIsLoading]=useState();
     const[ditail, setDitail]=useState();

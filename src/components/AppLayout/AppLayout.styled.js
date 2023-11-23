@@ -2,11 +2,13 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
+width: 1200px;
 margin: 0%, auto;
-padding: ${p=>p.theme.spacing(4)};
+padding: ${p=>p.theme.spacing(10)};
 background-color: #efef1d;
 `
 export const Header = styled.header`
+width: 900px;
 margin: 0%, auto;
 margin-bottom: ${p=>p.theme.spacing(4)};;
 padding: ${p=>p.theme.spacing(4)};

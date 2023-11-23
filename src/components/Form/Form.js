@@ -1,22 +1,13 @@
-// import { useState } from "react"
+import {ButtonSearch} from "./Form.styled";
 
 
-
-export default function FormSeach(){
-    // const handleSubmit= value => {
-    //     setSearchParams({ query: value });
-    //     };
-    // const[query, setQuery]=useState;
-
-    // const handleSubmit=event=>{
-
-    // }  
-
+export default function FormSeach({onSubmitSearch}){
+  
     return (
      
-            <form >
-               <input name="query" />
-               <button type="submit">Serch</button>            
+            <form onSubmit={onSubmitSearch}>
+               <input name="query"  onChange={event=> event.target.value} />
+               <ButtonSearch type="submit">Serch</ButtonSearch>            
             </form>
 
       
